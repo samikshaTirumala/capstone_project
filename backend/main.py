@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 
-from .analytics import (
+from analytics import (
     calculate_average_attendance,
     calculate_average_score,
     calculate_pass_percentage,
@@ -8,7 +8,8 @@ from .analytics import (
     find_student,
     get_all_students,
 )
-from .models import AnalyticsSummary, StudentPerformance
+
+from models import AnalyticsSummary, StudentPerformance
 
 
 app = FastAPI(title="Student Performance Analytics API")
